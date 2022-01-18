@@ -1,0 +1,28 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion project.COMPILE_SDK
+    defaultConfig {
+        minSdkVersion project.MIN_SDK
+        targetSdkVersion project.TARGET_SDK
+
+        applicationId "tk.nkduy.anim.sample"
+
+        versionCode 1
+        versionName "1.0"
+    }
+
+
+}
+
+dependencies {
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation "androidx.cardview:cardview:1.0.0"
+
+    implementation 'de.hdodenhof:circleimageview:2.1.0'
+
+    implementation 'com.jakewharton:butterknife:8.1.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.1.0'
+
+    implementation project(":anim")
+}
